@@ -1,12 +1,17 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import  "./App.scss"
+import Home from "./pages/home/Home"
 
 function App() {
   return (
-    <div>
-        <p>
-          Editand save to reload.\
-        </p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
