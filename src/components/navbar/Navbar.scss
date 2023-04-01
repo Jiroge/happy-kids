@@ -8,6 +8,8 @@
 }
 
 .navbar {
+  display: flex;
+
   .menu-text {
     margin: auto 0;
     width: 100%;
@@ -24,6 +26,7 @@
         text-align: center;
         line-height: 31px;
         color: "#282828";
+        font-size: 1em;
         &:visited {
           color: red;
           background-color: red;
@@ -38,6 +41,36 @@
             transition: 0.5s;
           }
         }
+      }
+    }
+  }
+  .hidden {
+    visibility: hidden;
+    background-color: red;
+  }
+  .menu-icon {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    margin-right: 10px;
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      color: #282828;
+      margin: auto 0;
+      p {
+        margin: 0 10px;
+        font-size: 1em;
+      }
+      .count-order {
+        background-color: #282828;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
     }
   }

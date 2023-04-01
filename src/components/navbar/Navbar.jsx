@@ -1,9 +1,15 @@
 import React from "react";
-import "./Navbar.scss";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+import "./Navbar.scss";
 
+import cart from "../../images/Icon/cart-svgrepo-com.svg";
+import user from "../../images/Icon/user-svgrepo-com.svg";
+function Navbar() {
+  const iconStyle = {
+    height: 22,
+    width: 22,
+  };
   return (
     <>
       <div className="topbar">
@@ -16,6 +22,16 @@ function Navbar() {
       </div>
 
       <div className="navbar">
+        <div className="menu-icon hidden">
+          <div className="icons">
+            <img src={user} alt="user" style={iconStyle} />
+            <p>Log Ln</p>
+          </div>
+          <div className="icons">
+            <img src={cart} alt="cart" style={iconStyle} />
+            <p>0</p>
+          </div>
+        </div>
         <div className="menu-text">
           <ul>
             <li>
@@ -35,12 +51,14 @@ function Navbar() {
           </ul>
         </div>
         <div className="menu-icon">
-            <div>
-
-            </div>
-            <div>
-                
-            </div>
+          <div className="icons">
+            <img src={user} alt="user" style={iconStyle} />
+            <p>Log In</p>
+          </div>
+          <div className="icons">
+            <img src={cart} alt="cart" style={iconStyle} />
+            <p className="count-order">0</p>
+          </div>
         </div>
       </div>
     </>
