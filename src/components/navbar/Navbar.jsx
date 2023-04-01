@@ -7,8 +7,8 @@ import cart from "../../images/Icon/cart-svgrepo-com.svg";
 import user from "../../images/Icon/user-svgrepo-com.svg";
 function Navbar() {
   const iconStyle = {
-    height: 22,
-    width: 22,
+    height: 20,
+    width: 20,
   };
   return (
     <>
@@ -18,7 +18,7 @@ function Navbar() {
       </div>
 
       <div className="brand">
-        <h1>happy kids</h1>
+        <h4>happy kids</h4>
       </div>
 
       <div className="navbar">

@@ -4,12 +4,16 @@
 
 .brand {
   text-align: center;
-  letter-spacing: 2px;
+  h4 {
+    letter-spacing: 15px;
+    margin: 50px auto;
+    font-size: 50px;
+    font-weight: 30;
+  }
 }
 
 .navbar {
   display: flex;
-
   .menu-text {
     margin: auto 0;
     width: 100%;
@@ -27,6 +31,7 @@
         line-height: 31px;
         color: "#282828";
         font-size: 1em;
+        
         &:visited {
           color: red;
           background-color: red;
@@ -35,6 +40,7 @@
           list-style: none;
           text-decoration: inherit;
           color: inherit;
+          padding: 0 10px;
           &:hover {
             text-decoration: "none";
             color: #d2461c;
@@ -51,8 +57,8 @@
   .menu-icon {
     display: flex;
     justify-content: space-around;
-    width: 20%;
-    margin-right: 10px;
+    width: 30%;
+    margin-right: 150px;
     .icons {
       display: flex;
       justify-content: space-between;
@@ -67,8 +73,8 @@
         color: #ffffff;
         text-align: center;
         border-radius: 12px;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 6px;
+        padding-right: 6px;
         padding-top: 2px;
         padding-bottom: 2px;
       }
