@@ -7,7 +7,7 @@ import cart from "../../images/Icon/cart-svgrepo-com.svg";
 import user from "../../images/Icon/user-svgrepo-com.svg";
 
 function Navbar() {
-  const [newText, setNewText] = useState("");
+  const [newText, setNewText] = useState("Free Shipping Over $50");
   const [currentObjectIndex, setCurrentObjectIndex] = useState(0);
 
   const iconStyle = {
@@ -23,10 +23,10 @@ function Navbar() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (currentObjectIndex < text.length - 1) {
-          setNewText(text[currentObjectIndex + 1])
+        setNewText(text[currentObjectIndex + 1])
         setCurrentObjectIndex(currentObjectIndex + 1);
       } else {
-          setNewText(text[0])
+        setNewText(text[0])
         setCurrentObjectIndex(0);
       }
     }, 5000); // Change object every 5 seconds

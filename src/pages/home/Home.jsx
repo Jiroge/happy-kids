@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <ImageSlider images={[banner1, banner2, banner3]} autoPlayDelay={1000000} />
+      <ImageSlider images={[banner1, banner2, banner3]} autoPlayDelay={10000} />
     </>
   );
 }
