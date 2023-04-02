@@ -1,20 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 
 import cart from "../../images/Icon/cart-svgrepo-com.svg";
 import user from "../../images/Icon/user-svgrepo-com.svg";
+
 function Navbar() {
+  const [newText, setNewText] = useState("");
+  const [currentObjectIndex, setCurrentObjectIndex] = useState(0);
+
   const iconStyle = {
     height: 20,
     width: 20,
   };
+
+  const text = [
+    "Get 10% Off - Use Coupon Code HAPPY123",
+    "Free Shipping Over $50",
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (currentObjectIndex < text.length - 1) {
+          setNewText(text[currentObjectIndex + 1])
+        setCurrentObjectIndex(currentObjectIndex + 1);
+      } else {
+          setNewText(text[0])
+        setCurrentObjectIndex(0);
+      }
+    }, 5000); // Change object every 5 seconds
+
+    return () => clearInterval(intervalId); // Clean up interval on unmount
+  });
+
+
   return (
     <>
       <div className="topbar">
-        <p>Get 10% Off - Use Coupon Code HAPPY123</p>
-        <p>Free Shipping Over $50</p>
+        <p>{newText}</p>
       </div>
 
       <div className="brand">

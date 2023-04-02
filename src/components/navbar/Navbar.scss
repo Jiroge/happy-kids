@@ -1,5 +1,14 @@
 .topbar {
   text-align: center;
+  width: 100%;
+  background-color: #282828;
+  line-height: 52px;
+  
+  p {
+    margin: 0;
+    color:#ffffff;
+    letter-spacing: 3px;
+  }
 }
 
 .brand {
