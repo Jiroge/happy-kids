@@ -1,0 +1,13 @@
+.shop-button {
+    button {
+      width: 102px;
+      height: 60px;
+      background-color: transparent;
+      cursor: pointer;
+      border: 1px groove #282828;
+    }
+    button:hover {
+      background-color: #282828;
+      color: #ffffff;
+    }
+}

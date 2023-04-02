@@ -1,10 +1,16 @@
-import Navbar from "../../components/navbar/Navbar"
+import Navbar from "../../components/navbar/Navbar";
+import ImageSlider from "../../components/imageSlider/ImageSlider";
+
+import banner1 from "../../images/Banner1.png";
+import banner2 from "../../images/Banner2.png";
+import banner3 from "../../images/Banner3.png";
 
 function Home() {
-return (
+  return (
     <>
-    <Navbar />
+      <Navbar />
+      <ImageSlider images={[banner1, banner2, banner3]} autoPlayDelay={1000000} />
     </>
-)
+  );
 }
 export default Home;
