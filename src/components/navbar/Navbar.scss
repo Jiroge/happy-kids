@@ -3,10 +3,10 @@
   width: 100%;
   background-color: #282828;
   line-height: 52px;
-  
+
   p {
     margin: 0;
-    color:#ffffff;
+    color: #ffffff;
     letter-spacing: 3px;
   }
 }
@@ -40,16 +40,17 @@
         line-height: 31px;
         color: "#282828";
         font-size: 1em;
-        
+
         &:visited {
           color: red;
           background-color: red;
         }
         .link {
-          list-style: none;
           text-decoration: inherit;
           color: inherit;
           padding: 0 10px;
+          letter-spacing: 3px;
+
           &:hover {
             text-decoration: "none";
             color: #d2461c;
