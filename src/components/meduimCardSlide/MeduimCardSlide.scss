@@ -1,0 +1,32 @@
+.slick-prev {
+  margin-top: -5%;
+  left: 0;
+  z-index: 5;
+}
+.slick-next {
+  margin-top: -5%;
+  right: 0;
+  z-index: 5;
+}
+
+.shop-all {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  button {
+    width: 150px;
+    height: 40px;
+    margin: auto 0;
+    padding: 0;
+    border: 1px solid #282828;
+    background-color: #282828;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  button:hover {
+    background-color: #d2461c;
+    border: 1px solid #d2461c;
+  }
+}

@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-import "./ImageSlider.scss";
-const ImageSlider = ({ images, autoPlayDelay = 5000 }) => {
+import "./LargeImageSlider.scss";
+const LargeImageSlider = ({ images, autoPlayDelay = 5000 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const timeoutRef = useRef(null);
 
@@ -35,6 +35,7 @@ const ImageSlider = ({ images, autoPlayDelay = 5000 }) => {
       );
     } else {
       setCurrentImageIndex(
+        
         currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
       );
     }
@@ -155,4 +156,4 @@ const ImageSlider = ({ images, autoPlayDelay = 5000 }) => {
   );
 };
 
-export default ImageSlider;
+export default LargeImageSlider;
