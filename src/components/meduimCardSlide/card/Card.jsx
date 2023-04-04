@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import "./Card.scss";
 function Card(props) {
@@ -19,7 +19,6 @@ function Card(props) {
           setHover(false);
         }}
       />
-      {/* <p style={{display: hover ? null : "none", transition: "0.5s"}}>Quick View</p> */}
       <div
         className="quick-view"
         onMouseEnter={() => {
