@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Card.scss";
 function Card(props) {
@@ -7,18 +8,21 @@ function Card(props) {
 
   return (
     <div className="product-card">
-      <img
-        src={
-          props.product.media[amountOfProduct === 2 ? (hover ? 1 : 0) : 0].url
-        }
-        alt="index"
-        onMouseEnter={() => {
-          setHover(true);
-        }}
-        onMouseLeave={() => {
-          setHover(false);
-        }}
-      />
+      <Link to="/ProductDetail">
+        <img
+          src={
+            props.product.media[amountOfProduct === 2 ? (hover ? 1 : 0) : 0].url
+          }
+          alt="index"
+          onMouseEnter={() => {
+            setHover(true);
+          }}
+          onMouseLeave={() => {
+            setHover(false);
+          }}
+        />
+      </Link>
+
       <div
         className="quick-view"
         onMouseEnter={() => {

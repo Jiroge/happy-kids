@@ -60,7 +60,7 @@ function MeduimCardSlide(props) {
         })}
       </Slider>
       <div className="shop-all">
-        <Link>
+        <Link to="/ShopCollection">
           <button>Shop all</button>
         </Link>
       </div>

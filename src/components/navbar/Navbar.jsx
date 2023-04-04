@@ -64,13 +64,13 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="link">Shop Collection</Link>
+              <Link to="/ShopCollection" className="link">Shop Collection</Link>
             </li>
             <li>
-              <Link className="link">Our Story</Link>
+              <Link to="/OurStory" className="link">Our Story</Link>
             </li>
             <li>
-              <Link className="link">Contact</Link>
+              <Link to="/Contact" className="link">Contact</Link>
             </li>
           </ul>
         </div>

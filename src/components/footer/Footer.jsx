@@ -25,16 +25,16 @@ function Footer() {
         <div className="page">
           <ul>
             <li>
-              <Link className="link">Home</Link>
+              <Link to="/" className="link">Home</Link>
             </li>
             <li>
-              <Link className="link">Shop Collection</Link>
+              <Link to="/ShopCollection" className="link">Shop Collection</Link>
             </li>
             <li>
-              <Link className="link">Our Story</Link>
+              <Link to="/OurStory" className="link">Our Story</Link>
             </li>
             <li>
-              <Link className="link">Contact</Link>
+              <Link to="/Contact" className="link">Contact</Link>
             </li>
           </ul>
         </div>
@@ -60,18 +60,18 @@ function Footer() {
         <div className="other">
           <ul>
             <li>
-              <Link to="/" className="link">
+              <Link to="/ShippingReturns" className="link">
                 Shipping & Returns
               </Link>
             </li>
             <li>
-              <Link className="link">Store Policy</Link>
+              <Link to="/StorePolicy" className="link">Store Policy</Link>
             </li>
             <li>
-              <Link className="link">Payment Methods</Link>
+              <Link to="/PaymentMethods" className="link">Payment Methods</Link>
             </li>
             <li>
-              <Link className="link">FAQ</Link>
+              <Link to="/Faq" className="link">FAQ</Link>
             </li>
           </ul>
         </div>
