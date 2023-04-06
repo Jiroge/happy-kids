@@ -7,15 +7,17 @@ import banner1 from "../../images/Banner1.png";
 import banner2 from "../../images/Banner2.png";
 import banner3 from "../../images/Banner3.png";
 
-import mockupdata from "../../mockupProduct.json"
-
-function Home() {
+function Home(props) {
+  // console.log(props);
 
   return (
     <>
       <Navbar />
-      <LargeImageSlider images={[banner1, banner2, banner3]} autoPlayDelay={10000} />
-      <MeduimCardSlide mockupdata={mockupdata.detail.data.catalog.category.productsWithMetaData}/>
+      <LargeImageSlider
+        images={[banner1, banner2, banner3]}
+        autoPlayDelay={10000}
+      />
+      <MeduimCardSlide products={props.products} />
       <Footer />
     </>
   );

@@ -19,7 +19,7 @@ function SamplePrevArrow(props) {
 }
 
 function MeduimCardSlide(props) {
-  const products = props.mockupdata.list;
+  const products = props.products.list;
   // console.log(props.mockupdata.list);
 
   const settings = {
