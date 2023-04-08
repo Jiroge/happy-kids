@@ -7,18 +7,18 @@ import { Checkbox, FormControlLabel } from "@material-ui/core";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import config from "../../config";
-
-import "./Shop-Collection.scss";
 import Card from "../../components/meduimCardSlide/card/Card";
 
+import "./Shop-Collection.scss";
+
 const options = [
-  { value: "0-3", display: "0-3 months", label: "0-3+months" },
-  { value: "3-6", display: "3-6 months", label: "3-6+months" },
-  { value: "6-12", display: "6-12 months", label: "6-12+months" },
-  { value: "2", display: "2 years", label: "2+years" },
-  { value: "3", display: "3 years", label: "3+years" },
-  { value: "12-18", display: "12-18 months", label: "12-18+months" },
-  { value: "18-24", display: "18-24 months", label: "18-24+months" },
+  { value: "0-3", display: "0-3 months", label: "0-3 months" },
+  { value: "3-6", display: "3-6 months", label: "3-6 months" },
+  { value: "6-12", display: "6-12 months", label: "6-12 months" },
+  { value: "2", display: "2 years", label: "2 years" },
+  { value: "3", display: "3 years", label: "3 years" },
+  { value: "12-18", display: "12-18 months", label: "12-18 months" },
+  { value: "18-24", display: "18-24 months", label: "18-24 months" },
 ];
 
 const color = [
@@ -72,7 +72,7 @@ function ShopCollection(props) {
       // console.log("fetchDataFromData fetchPrice", fetchPrice);
       // console.log("fetchDataFromData fetchColor", fetchColor);
       // console.log("fetchDataFromData fetchColor", fetchColor);
-      // console.log("fetchDataFromData fetchSize", fetchSize);
+      console.log("fetchDataFromData fetchSize", fetchSize);
       if (fetchCollection) {
         const checkAllCollection =
           fetchCollection === "All" ? "" : fetchCollection;
@@ -115,21 +115,24 @@ function ShopCollection(props) {
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );
-      } else if (fetchPrice) {
+      } else if (fetchSize) {
         const checkAllCollection =
           fetchCollection === "All" ? "" : fetchCollection;
 
         const urlParams = new URLSearchParams({
           OPTION_LIST: fetchSize,
-          ...(fetchSize && { OPTION_COLOR: fetchColor }),
+          ...(fetchColor && { OPTION_COLOR: fetchColor }),
           ...(fetchPrice && { PRICE: fetchPrice }),
           ...(checkAllCollection && { CATEGORY: checkAllCollection }),
         });
         const fetchData = await axios.get(`${url}/?${urlParams.toString()}`);
+        console.log(`${url}/?${urlParams.toString()}`)
+        console.log(fetchData.data.detail.data.catalog.category.productsWithMetaData.list)
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );
       }
+
     };
 
     if (
