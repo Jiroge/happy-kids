@@ -27,7 +27,7 @@ function ProductDetail() {
 
     useEffect(() => {
         const fetchProductFromDB = async () => {
-            const fetchProduct = await axios.get(`${url}/details/${product.sku}`);
+            const fetchProduct = await axios.get(`${url}/products/details/${product.sku}`);
             // console.log(fetchProduct.data.detail.data.catalog.product);
             setData(fetchProduct.data.detail.data.catalog.product);
         };
@@ -165,16 +165,13 @@ function ProductDetail() {
                             :
                             ""
                         }
-
-
                     </div>
                     <div>
-
                     </div>
 
                 </div>
             </div>
-            <RelatedProduct />
+            {data ? <RelatedProduct relate={data.options} productName={product.sku} /> : ""}
             <Footer />
         </>
     );
