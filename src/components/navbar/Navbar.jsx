@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
+import SignUp from "../signUp/SignUp"
 
 import cart from "../../images/Icon/cart-svgrepo-com.svg";
 import user from "../../images/Icon/user-svgrepo-com.svg";
@@ -9,6 +10,7 @@ import user from "../../images/Icon/user-svgrepo-com.svg";
 function Navbar() {
   const [newText, setNewText] = useState("Free Shipping Over $50");
   const [currentObjectIndex, setCurrentObjectIndex] = useState(0);
+  const [showLogIn, setShowLogIn] = useState(false);
 
   const iconStyle = {
     height: 20,
@@ -33,7 +35,6 @@ function Navbar() {
 
     return () => clearInterval(intervalId); // Clean up interval on unmount
   });
-
 
   return (
     <>
@@ -75,7 +76,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="menu-icon">
-          <div className="icons">
+          <div className="icons" onClick={() => setShowLogIn(true)}>
             <img src={user} alt="user" style={iconStyle} />
             <p>Log In</p>
           </div>
@@ -85,6 +86,9 @@ function Navbar() {
           </div>
         </div>
       </div>
+      {showLogIn && <SignUp closeSigUp={(event) => {
+        setShowLogIn(event)
+      }} />}
     </>
   );
 }

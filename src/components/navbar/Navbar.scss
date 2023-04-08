@@ -69,11 +69,13 @@
     justify-content: space-around;
     width: 30%;
     margin-right: 150px;
+    cursor: pointer;
     .icons {
       display: flex;
       justify-content: space-between;
       color: #282828;
       margin: auto 0;
+      cursor: pointer;
       p {
         margin: 0 10px;
         font-size: 1em;

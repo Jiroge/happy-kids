@@ -1,0 +1,45 @@
+.sign-Up {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  .facebook {
+    background-color: #4267b2;
+    border: none;
+    &:hover {
+      background-color: #4267b2d7;
+    }
+  }
+  .google {
+    background-color: #4285f4;
+    border: none;
+    &:hover {
+      background-color: #4286f4ce;
+    }
+  }
+  button {
+    width: 300px;
+    height: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+.hr {
+  border: none;
+  margin: 0 auto;
+  height: 1px;
+  background: #28282873;
+  width: 300px;
+}
+.email {
+    width: 300px;
+    height: 40px;
+    background-color: transparent;
+  border: 1px solid #28282873;
+  font-size: 1em;
+
+}
