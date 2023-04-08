@@ -127,7 +127,6 @@ function ShopCollection(props) {
         });
         const fetchData = await axios.get(`${url}/?${urlParams.toString()}`);
         console.log(`${url}/?${urlParams.toString()}`)
-        console.log(fetchData.data.detail.data.catalog.category.productsWithMetaData.list)
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );

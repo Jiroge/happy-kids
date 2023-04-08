@@ -20,7 +20,6 @@ function SamplePrevArrow(props) {
 
 function MeduimCardSlide(props) {
   const products = props.products.list;
-  // console.log(props.mockupdata.list);
 
   const settings = {
     dots: false,
@@ -29,8 +28,6 @@ function MeduimCardSlide(props) {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-    // nextArrow: <AiOutlineRight />,
-    // prevArrow: <AiOutlineLeft />,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -41,7 +38,6 @@ function MeduimCardSlide(props) {
         margin: " 70px",
         height: "750px",
         padding: 0,
-        // backgroundColor: "red",
       }}
     >
       <h4

@@ -5,10 +5,9 @@ import "./Card.scss";
 function Card(props) {
   const [hover, setHover] = useState(false);
   const amountOfProduct = props.product.media.length;
-
   return (
     <div className="product-card">
-      <Link to="/ProductDetail">
+      <Link to="/ProductDetail" state={{ product: props.product }}>
         <img
           src={
             props.product.media[amountOfProduct === 2 ? (hover ? 1 : 0) : 0].url
