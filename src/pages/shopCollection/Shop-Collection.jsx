@@ -7,7 +7,7 @@ import { Checkbox, FormControlLabel } from "@material-ui/core";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import config from "../../config";
-import Card from "../../components/meduimCardSlide/card/Card";
+import CollectionCard from "../../components/collectionCard/CollectionCard";
 
 import "./Shop-Collection.scss";
 
@@ -361,7 +361,7 @@ function ShopCollection(props) {
         <div className="product-row">
           {products.map((product, index) => (
             <div key={index} className="card">
-              <Card product={product} />
+              <CollectionCard product={product} />
             </div>
           ))}
         </div>

@@ -102,7 +102,7 @@ const LargeImageSlider = ({ images, autoPlayDelay = 5000 }) => {
               NEW COLLECTION
             </p>
             <div className="shop-button">
-              <Link>
+              <Link to="/ShopCollection">
                 <button>Shop Now</button>
               </Link>
             </div>
