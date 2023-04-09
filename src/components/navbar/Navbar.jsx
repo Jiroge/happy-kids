@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 import SignUp from "../signUp/SignUp"
+import AddToCart from "../../components/addToCart/AddToCart"
 
 import cart from "../../images/Icon/cart-svgrepo-com.svg";
 import user from "../../images/Icon/user-svgrepo-com.svg";
 
-function Navbar() {
+function Navbar(props) {
   const [newText, setNewText] = useState("Free Shipping Over $50");
   const [currentObjectIndex, setCurrentObjectIndex] = useState(0);
   const [showLogIn, setShowLogIn] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  // const [selectProduct, setSelectProduct] = useState({});
 
   const iconStyle = {
     height: 20,
@@ -22,6 +25,26 @@ function Navbar() {
     "Free Shipping Over $50",
   ];
 
+  // useEffect(() => {
+  //   const select = props.select
+  //   const checkProps = () => {
+  //     if (props) {
+  //       if (props.select.selectColor & props.select.selectSize & props.select.selectQuantity) {
+  //         console.log("Navbar already selected")
+  //         setSelectProduct(select)
+  //       } else {
+  //         setSelectProduct(select)
+  //         console.log("Navbar selected", select)
+  //         // console.log("Navbar not selected")
+  //       }
+  //     } else {
+  //       console.log("no props")
+  //     }
+  //   }
+  //   checkProps()
+  // }, [props])
+
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (currentObjectIndex < text.length - 1) {
@@ -31,9 +54,9 @@ function Navbar() {
         setNewText(text[0])
         setCurrentObjectIndex(0);
       }
-    }, 5000); // Change object every 5 seconds
+    }, 5000);
 
-    return () => clearInterval(intervalId); // Clean up interval on unmount
+    return () => clearInterval(intervalId);
   });
 
   return (
@@ -80,7 +103,7 @@ function Navbar() {
             <img src={user} alt="user" style={iconStyle} />
             <p>Log In</p>
           </div>
-          <div className="icons">
+          <div className="icons" onClick={() => setShowCart(true)}>
             <img src={cart} alt="cart" style={iconStyle} />
             <p className="count-order">0</p>
           </div>
@@ -89,6 +112,10 @@ function Navbar() {
       {showLogIn && <SignUp closeSigUp={(event) => {
         setShowLogIn(event)
       }} />}
+      {showCart && <AddToCart
+        closeCart={(event) => {
+          setShowCart(event)
+        }} />}
     </>
   );
 }

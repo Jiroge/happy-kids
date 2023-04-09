@@ -191,7 +191,7 @@ function ShopCollection(props) {
 
   return (
     <>
-      <Navbar />
+      <Navbar select={false} />
       <div className="filter-tab">
         <div className="filter">
           <h4>Filter by</h4>
