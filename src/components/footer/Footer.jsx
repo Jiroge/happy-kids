@@ -15,26 +15,32 @@ function Footer() {
   };
   return (
     <>
-      <div
-        style={{ textAlign: "center", marginTop: "70px", marginBottom: "70px" }}
-      >
-        <h4 style={{ letterSpacing: "5px", fontSize: "1.5em" }}>happy kids</h4>
+      <div className="logo-brand">
+        <h4>happy kids</h4>
       </div>
 
       <div className="footer-content">
         <div className="page">
           <ul>
             <li>
-              <Link to="/" className="link">Home</Link>
+              <Link to="/" className="link">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/ShopCollection" className="link">Shop Collection</Link>
+              <Link to="/ShopCollection" className="link">
+                Shop Collection
+              </Link>
             </li>
             <li>
-              <Link to="/OurStory" className="link">Our Story</Link>
+              <Link to="/OurStory" className="link">
+                Our Story
+              </Link>
             </li>
             <li>
-              <Link to="/Contact" className="link">Contact</Link>
+              <Link to="/Contact" className="link">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -65,41 +71,33 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/StorePolicy" className="link">Store Policy</Link>
+              <Link to="/StorePolicy" className="link">
+                Store Policy
+              </Link>
             </li>
             <li>
-              <Link to="/PaymentMethods" className="link">Payment Methods</Link>
+              <Link to="/PaymentMethods" className="link">
+                Payment Methods
+              </Link>
             </li>
             <li>
-              <Link to="/Faq" className="link">FAQ</Link>
+              <Link to="/Faq" className="link">
+                FAQ
+              </Link>
             </li>
           </ul>
         </div>
       </div>
 
-      <div style={{ marginTop: "100px", marginBottom: "70px" }}>
-        <p
-          style={{
-            letterSpacing: "3px",
-            textAlign: "center",
-            fontSize: "1.2em",
-            color: "#6C757D",
-          }}
-        >
-          Join Our Mailing List
-        </p>
+      <div className="input-form">
+        <p>Join Our Mailing List</p>
         <form>
           <input
-            type="text"
+            type="email"
             //  onChange={}
             onClick={() => setFocus(true)}
             placeholder="Enter your email here*"
             style={{
-              height: "40px",
-              width: "350px",
-              margin: "5px",
-              padding: 0,
-              paddingLeft: "20px",
               border: focus ? "2px solid #ff4040" : "1px solid #282828",
             }}
             required
