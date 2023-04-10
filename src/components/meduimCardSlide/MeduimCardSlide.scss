@@ -1,32 +1,101 @@
-.slick-prev {
-  margin-top: -5%;
-  left: 0;
-  z-index: 5;
-}
-.slick-next {
-  margin-top: -5%;
-  right: 0;
-  z-index: 5;
+.meduim-card-slide {
+  margin: 70px;
+  height: 750px;
+  padding: 0;
+  .new-arrivals {
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .card-container {
+    width: 20%;
+  }
+  .slick-prev {
+    margin-top: -5%;
+    left: 0;
+    z-index: 5;
+  }
+  .slick-next {
+    margin-top: -5%;
+    right: 0;
+    z-index: 5;
+  }
+
+  .shop-all {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    button {
+      width: 150px;
+      height: 40px;
+      margin: auto 0;
+      padding: 0;
+      border: 1px solid #282828;
+      background-color: #282828;
+      color: #ffffff;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    button:hover {
+      background-color: #d2461c;
+      border: 1px solid #d2461c;
+    }
+  }
+  .hr-style {
+    margin-left: -100px;
+    width: 100vw;
+  }
 }
 
-.shop-all {
-  margin-top: 70px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  button {
-    width: 150px;
-    height: 40px;
-    margin: auto 0;
-    padding: 0;
-    border: 1px solid #282828;
-    background-color: #282828;
-    color: #ffffff;
-    cursor: pointer;
-    transition: 0.5s;
+@media (max-width: 1520px) {
+  .meduim-card-slide {
+    height: 650px;
+    .hr-style {
+      margin-left: -70px;
+    }
   }
-  button:hover {
-    background-color: #d2461c;
-    border: 1px solid #d2461c;
+}
+@media (max-width: 1250px) {
+  .meduim-card-slide {
+    height: 550px;
+  }
+}
+@media (max-width: 1000px) {
+  .meduim-card-slide {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .meduim-card-slide {
+    margin-top: 10px;
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .meduim-card-slide {
+    margin-left: 10px;
+    margin-right: 10px;
+    .shop-all {
+      margin-top: 50px;
+      button {
+        font-size: 0.7em;
+        width: 120px;
+        height: 30px;
+      }
+    }
+    .hr-style {
+      margin-left: -10px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .meduim-card-slide {
+    height: 350px;
+  }
+}
+@media (max-width: 280px) {
+  .meduim-card-slide {
+    height: 280px;
   }
 }

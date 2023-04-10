@@ -33,23 +33,12 @@ function MeduimCardSlide(props) {
   };
 
   return (
-    <div
-      style={{
-        margin: " 70px",
-        height: "750px",
-        padding: 0,
-      }}
-    >
-      <h4
-        style={{ letterSpacing: "5px", fontSize: "1.5em", textAlign: "center" }}
-      >
-        New Arrivals
-      </h4>
-
+    <div className="meduim-card-slide">
+      <h4 className="new-arrivals">New Arrivals</h4>
       <Slider {...settings}>
         {products.map((product, index) => {
           return (
-            <div style={{ width: "20%" }} key={index}>
+            <div className="card-container" key={index}>
               <Card product={product} />
             </div>
           );
@@ -60,12 +49,7 @@ function MeduimCardSlide(props) {
           <button>Shop all</button>
         </Link>
       </div>
-      <hr
-        style={{
-          marginLeft: "-100px",
-          width: "100vw",
-        }}
-      />
+      <hr className="hr-style" />
     </div>
   );
 }
