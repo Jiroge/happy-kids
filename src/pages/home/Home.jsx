@@ -8,8 +8,6 @@ import banner2 from "../../images/Banner2.png";
 import banner3 from "../../images/Banner3.png";
 
 function Home(props) {
-  // console.log(props);
-
   return (
     <>
       <Navbar />

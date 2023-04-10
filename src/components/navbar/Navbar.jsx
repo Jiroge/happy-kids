@@ -25,26 +25,6 @@ function Navbar(props) {
     "Free Shipping Over $50",
   ];
 
-  // useEffect(() => {
-  //   const select = props.select
-  //   const checkProps = () => {
-  //     if (props) {
-  //       if (props.select.selectColor & props.select.selectSize & props.select.selectQuantity) {
-  //         console.log("Navbar already selected")
-  //         setSelectProduct(select)
-  //       } else {
-  //         setSelectProduct(select)
-  //         console.log("Navbar selected", select)
-  //         // console.log("Navbar not selected")
-  //       }
-  //     } else {
-  //       console.log("no props")
-  //     }
-  //   }
-  //   checkProps()
-  // }, [props])
-
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (currentObjectIndex < text.length - 1) {

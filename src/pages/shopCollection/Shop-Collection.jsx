@@ -61,18 +61,12 @@ function ShopCollection(props) {
   };
 
   useEffect(() => {
-    // console.log("useEffect");
     const fetchDataFromData = async (
       fetchCollection,
       fetchPrice,
       fetchColor,
       fetchSize
     ) => {
-      // console.log("fetchDataFromData fetchCollection", fetchCollection);
-      // console.log("fetchDataFromData fetchPrice", fetchPrice);
-      // console.log("fetchDataFromData fetchColor", fetchColor);
-      // console.log("fetchDataFromData fetchColor", fetchColor);
-      // console.log("fetchDataFromData fetchSize", fetchSize);
       if (fetchCollection) {
         const checkAllCollection =
           fetchCollection === "All" ? "" : fetchCollection;
@@ -82,7 +76,9 @@ function ShopCollection(props) {
           ...(fetchColor && { OPTION_COLOR: fetchColor }),
           ...(fetchSize && { OPTION_LIST: fetchSize }),
         });
-        const fetchData = await axios.get(`${url}/products/?${urlParams.toString()}`);
+        const fetchData = await axios.get(
+          `${url}/products/?${urlParams.toString()}`
+        );
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );
@@ -97,7 +93,9 @@ function ShopCollection(props) {
           ...(fetchColor && { OPTION_COLOR: fetchColor }),
           ...(fetchSize && { OPTION_LIST: fetchSize }),
         });
-        const fetchData = await axios.get(`${url}/products/?${urlParams.toString()}`);
+        const fetchData = await axios.get(
+          `${url}/products/?${urlParams.toString()}`
+        );
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );
@@ -111,7 +109,9 @@ function ShopCollection(props) {
           ...(checkAllCollection && { CATEGORY: checkAllCollection }),
           ...(fetchSize && { OPTION_LIST: fetchSize }),
         });
-        const fetchData = await axios.get(`${url}/products/?${urlParams.toString()}`);
+        const fetchData = await axios.get(
+          `${url}/products/?${urlParams.toString()}`
+        );
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );
@@ -125,13 +125,14 @@ function ShopCollection(props) {
           ...(fetchPrice && { PRICE: fetchPrice }),
           ...(checkAllCollection && { CATEGORY: checkAllCollection }),
         });
-        const fetchData = await axios.get(`${url}/products/?${urlParams.toString()}`);
-        console.log(`${url}/?${urlParams.toString()}`)
+        const fetchData = await axios.get(
+          `${url}/products/?${urlParams.toString()}`
+        );
+        console.log(`${url}/?${urlParams.toString()}`);
         setProducts(
           fetchData.data.detail.data.catalog.category.productsWithMetaData.list
         );
       }
-
     };
 
     if (
