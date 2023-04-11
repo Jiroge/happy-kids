@@ -6,7 +6,7 @@ function Faq() {
         <>
             <Navbar />
 
-            <p>This is Faq</p>
+            <p style={{textAlign: "center"}}>This is Faq</p>
             <Footer />
         </>
     )

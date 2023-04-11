@@ -6,7 +6,7 @@ function StorePolicy() {
 return (
     <>
     <Navbar/>
-    <p>This is StorePolicy</p>
+    <p style={{textAlign: "center"}}>This is StorePolicy</p>
     <Footer/>
     </>
 )

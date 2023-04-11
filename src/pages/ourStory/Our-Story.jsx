@@ -5,7 +5,7 @@ function OurStory() {
     return (
         <>
             <Navbar />
-            <p>This is OurStory</p>
+            <p style={{textAlign: "center"}}>This is OurStory</p>
             <Footer />
         </>
     )

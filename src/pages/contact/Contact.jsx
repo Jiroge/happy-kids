@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <p>This is Contact</p>
+      <p style={{textAlign: "center"}}>This is Contact</p>
       <Footer />
     </>
   );

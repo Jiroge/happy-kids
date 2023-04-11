@@ -5,7 +5,7 @@ function PaymentMethods() {
     return (
         <>
             <Navbar />
-            <p>This is PaymentMethods</p>
+            <p style={{textAlign: "center"}}>This is PaymentMethods</p>
             <Footer />
         </>
     )

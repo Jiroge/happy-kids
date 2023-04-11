@@ -5,7 +5,7 @@ function ShippingReturns() {
 return (
     <>
     <Navbar/>
-    <p>This is ShippingReturns</p>
+    <p style={{textAlign: "center"}}>This is ShippingReturns</p>
     <Footer/>
     </>
 )
