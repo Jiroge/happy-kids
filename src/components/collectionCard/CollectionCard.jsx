@@ -6,7 +6,7 @@ function CollectionCard(props) {
   const [hover, setHover] = useState(false);
   const amountOfProduct = props.product.media.length;
   return (
-    <div className="product-card">
+    <div className="collection-product-card">
       <Link to="/ProductDetail" state={{ product: props.product }}>
         <img
           src={
